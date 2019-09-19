@@ -1,8 +1,9 @@
 ---
 layout: default
+background: '/static/pagepics/404.jpg'
 ---
 
-<style type="text/css" media="screen">
+<!-- <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -14,11 +15,27 @@ layout: default
     line-height: 1;
     letter-spacing: -1px;
   }
-</style>
+</style> -->
 
-<div class="container">
-  <h1>404</h1>
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+              <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+              <p><strong>Page not found :(</strong></p>
+              <p>The requested page could not be found.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
