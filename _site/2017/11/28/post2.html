@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Servin&#39; it up - Theodore Chiu
+    
+  </title>
+
+  <meta name="description" content="Servers! As you may have noticed there is now an FTP tab! While this is mostly for my use since its password protected, it’s still something new on the site....">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:3000/2017/11/28/post2.html">
+  <link rel="alternate" type="application/rss+xml" title="Theodore Chiu" href="/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Theodore Chiu</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/static/posts/Featured_Virtulization.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Servin' it up</h1>
+            
+            <span class="meta">Posted by
+              <a href="#"></a>
+              on November 28, 2017 &middot; <span class="reading-time" title="Estimated read time">
+  
+   2 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h2 id="servers">Servers!</h2>
+<p>As you may have noticed there is now an FTP tab! While this is mostly for my use since its password protected, it’s still something new on the site. I’ve always wanted to run a server, and since my network is a mess of cascading and parallel routers, the port forwarding and ip addresses were always difficult to manage. But, I finally sat down, diagrammed all the static ip’s and with some port forwarding figured out how to serve to the world wide web!</p>
+
+<h2 id="dynamic-vs-static-ip-addresses">Dynamic vs Static ip addresses</h2>
+<p>The one caviat is that since I don’t own a domain name or a static ip, the server has to run a dynamic update client. For the people that don’t know how the internet works, each website is assigned an ip address, although you might not know it. For example no one looks up <a href="http://31.13.69.228">31.13.69.228</a>, but that ip address belongs to facebook. In the same way people don’t go on typing strings of 4 numbers into their address bar when they want to go to a website, instead they type a domain name. Theoretically, typing the 4 strings of digits works for websites that own ip addresses. <a href="http://31.13.69.228">31.13.69.228</a> belongs to facebook, since they bought it long ago. But for people like me who lack the funds to pay for a static ip address, but have internet, our internet service provider routinely changes my ip address.</p>
+
+<h2 id="the-workaround">The workaround</h2>
+<p>The solution is a dyanamic update client. The DUC routinely goes on the internet and checks its own ip address before uploading the information onto another server where I have registered for a subdomain (for free). This way whenver the ip address for my network changes, the server will discover the change and change the slave ip on the dynamic ip server, this in turn changes the subdomain to refer to that ip address instead of the expired one.</p>
+
+<h2 id="the-magic">The magic</h2>
+<p>Now, not only can I access my files via sftp on my server from any computer with an internet connection, but I can also log in and manage the server via a command line interface.</p>
+
+<h2 id="the-future">The future</h2>
+<p>The future might hold VPN’s and even serve Apache… who knows?</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/2017/09/08/post1.html" data-toggle="tooltip" data-placement="top" title="A little about me...">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/2017/12/07/Memories-of-the-homeland.html" data-toggle="tooltip" data-placement="top" title="Memories of the Homeland">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:theochiu.me@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/jekyllrb">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/theochiu">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy;  2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+</body>
+
+</html>
